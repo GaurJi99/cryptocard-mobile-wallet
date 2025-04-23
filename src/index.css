@@ -94,14 +94,21 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
     -webkit-tap-highlight-color: transparent;
   }
-  
+
   .mobile-container {
     @apply max-w-md mx-auto h-[100dvh] bg-white text-black overflow-y-auto;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 
   .crypto-card {

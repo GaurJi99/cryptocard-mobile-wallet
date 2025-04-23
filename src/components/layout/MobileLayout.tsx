@@ -8,12 +8,14 @@ interface MobileLayoutProps {
   activeTab?: "home" | "card" | "benefits" | "hub";
 }
 
-const MobileLayout = ({ children, hideNavigation = false, activeTab = "home" }: MobileLayoutProps) => {
+const MobileLayout = ({
+  children,
+  hideNavigation = false,
+  activeTab = "home",
+}: MobileLayoutProps) => {
   return (
     <div className="mobile-container flex flex-col">
-      <div className="flex-1 overflow-y-auto pb-16">
-        {children}
-      </div>
+      <div className="flex-1 overflow-y-auto pb-16 scrollbar-none">{children}</div>
       {!hideNavigation && <BottomNavigation activeTab={activeTab} />}
     </div>
   );
