@@ -97,5 +97,30 @@
 
   body {
     @apply bg-background text-foreground;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .mobile-container {
+    @apply max-w-md mx-auto h-[100dvh] bg-white text-black overflow-y-auto;
+  }
+
+  .crypto-card {
+    @apply bg-cryptoCard-dark text-white rounded-2xl p-4 w-full aspect-[16/10] relative overflow-hidden;
+  }
+
+  .action-button {
+    @apply flex flex-col items-center justify-center gap-1 p-2 rounded-full;
+  }
+
+  .action-button-primary {
+    @apply bg-black text-white;
+  }
+  
+  .action-button-secondary {
+    @apply bg-gray-100;
+  }
+
+  .wallet-card {
+    @apply bg-white border border-gray-200 rounded-xl p-4;
   }
 }

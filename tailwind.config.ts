@@ -52,6 +52,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				crypto: {
+					usdt: '#26A17B',
+					usdc: '#2775CA',
+					btc: '#F7931A',
+					eth: '#627EEA',
+				},
+				cryptoCard: {
+					primary: '#8B5CF6',
+					secondary: '#7E69AB',
+					tertiary: '#6E59A5',
+					dark: '#1A1F2C',
+					light: '#F1F0FB',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
