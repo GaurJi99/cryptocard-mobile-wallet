@@ -1,6 +1,5 @@
-
 import React from "react";
-import { PlusCircle, ArrowRightLeft, SendHorizontal, MoreHorizontal } from "lucide-react";
+import { Plus, ArrowRight, ArrowLeft, Menu } from "lucide-react";
 
 interface ActionButtonsProps {
   onDeposit: () => void;
@@ -8,6 +7,7 @@ interface ActionButtonsProps {
   onConvert: () => void;
   onMore: () => void;
 }
+
 interface ActionButtonProps {
   icon: React.ReactNode;
   label: string;
@@ -35,23 +35,23 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({ onDeposit, onSend, onConv
   return (
     <div className="flex justify-around my-5 gap-1">
       <ActionButton 
-        icon={<PlusCircle size={24} />} 
+        icon={<Plus size={24} />} 
         label="Deposit"
         primary
         onClick={onDeposit}
       />
       <ActionButton 
-        icon={<SendHorizontal size={24} />} 
+        icon={<ArrowRight size={24} />} 
         label="Send"
         onClick={onSend}
       />
       <ActionButton 
-        icon={<ArrowRightLeft size={24} />} 
+        icon={<ArrowLeft size={24} />} 
         label="Convert"
         onClick={onConvert}
       />
       <ActionButton 
-        icon={<MoreHorizontal size={24} />} 
+        icon={<Menu size={24} />} 
         label="More"
         onClick={onMore}
       />

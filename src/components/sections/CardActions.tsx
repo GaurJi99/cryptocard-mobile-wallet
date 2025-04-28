@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Eye, Snowflake, Shield, Settings } from "lucide-react";
+import { Info, Settings, Menu } from "lucide-react";
 
 interface CardActionsProps {
   onView: () => void;
@@ -26,9 +26,9 @@ const ActionTile: React.FC<{ icon: React.ReactNode, label: string, onClick: () =
 const CardActions: React.FC<CardActionsProps> = ({ onView, onFreeze, onLimit, onSettings }) => {
   return (
     <div className="flex justify-around my-6 select-none">
-      <ActionTile icon={<Eye size={20} />} label="View" onClick={onView} />
-      <ActionTile icon={<Snowflake size={20} />} label="Freeze" onClick={onFreeze} />
-      <ActionTile icon={<Shield size={20} />} label="Limit" onClick={onLimit} />
+      <ActionTile icon={<Info size={20} />} label="View" onClick={onView} />
+      <ActionTile icon={<Menu size={20} />} label="Freeze" onClick={onFreeze} />
+      <ActionTile icon={<Menu size={20} />} label="Limit" onClick={onLimit} />
       <ActionTile icon={<Settings size={20} />} label="Settings" onClick={onSettings} />
     </div>
   );

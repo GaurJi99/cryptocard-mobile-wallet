@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Home, CreditCard, Award, LayoutGrid } from "lucide-react";
+import { Home, CreditCard, Info, Menu } from "lucide-react";
 
 type BottomNavigationProps = {
   activeTab: "home" | "card" | "benefits" | "hub";
@@ -23,13 +23,13 @@ const BottomNavigation = ({ activeTab }: BottomNavigationProps) => {
     { 
       name: "benefits", 
       label: "Benefits", 
-      icon: Award, 
+      icon: Info, 
       path: "/benefits" 
     },
     { 
       name: "hub", 
       label: "Hub", 
-      icon: LayoutGrid, 
+      icon: Menu, 
       path: "/hub" 
     },
   ];
@@ -46,7 +46,7 @@ const BottomNavigation = ({ activeTab }: BottomNavigationProps) => {
               : "text-gray-500 hover:text-gray-700"
           }`}
         >
-          <tab.icon size={24} />
+          <tab.icon size={24} strokeWidth={2} />
           <span className="text-xs mt-1 font-medium">{tab.label}</span>
         </Link>
       ))}
